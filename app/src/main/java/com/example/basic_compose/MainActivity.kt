@@ -32,6 +32,15 @@ fun Greeting(name: String) {
     Text(text = "Hello $name!")
 }
 
+
+@Composable
+fun HomeGreetingCard(name: String) {
+    Text(text = "Hey $name , Good moring")
+    Text(text = "You are in hyderabadd")
+    Text(text = "Search for some cool vibes")
+    Text(text = "Hey $name , Good moring")
+}
+
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
