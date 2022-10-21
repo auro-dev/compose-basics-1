@@ -23,3 +23,25 @@ class NoteRepositoryImpl(
         dao.deleteNote(note)
     }
 }
+
+
+
+class ToDoRepositoryImpl(
+    private val dao: ToDoDao
+) : ToDoRepository {
+    override fun getToDos(): Flow<List<ToDo>> {
+        return dao.getToDos()
+    }
+
+    override suspend fun getToDoById(id: Int): ToDo? {
+        return dao.getToDoById(id)
+    }
+
+    override suspend fun insertToDo(todo: ToDo) {
+        dao.insertToDo(todo)
+    }
+
+    override suspend fun deleteToDo(todo: ToDo) {
+        dao.deleteToDo(todo)
+    }
+}
